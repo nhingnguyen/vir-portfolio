@@ -1,15 +1,32 @@
-# Use official Node.js image for building the React app
-FROM node:18 AS build
+# Dockerfile
 
+# Step 1: Use a Node.js image to build the app
+FROM node:18 as builder
+
+# Set working directory inside the container
 WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the app’s source code
 COPY . .
 
-RUN npm install
+# Build the app
 RUN npm run build
 
-# Serve the app using Nginx
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
 
-# Custom Nginx config
-COPY nginx.conf /etc/nginx/nginx.conf
+# Step 2: Use an Nginx image to serve the static files
+FROM nginx:alpine
+
+# Copy the build files from the builder stage to the Nginx web directory
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx server
+CMD ["nginx", "-g", "daemon off;"]
