@@ -1,0 +1,62 @@
+#experience {
+  background: #0e0e1a;
+  padding: 6rem 2rem;
+}
+
+#experience h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  background: linear-gradient(90deg, #667eea, #ff6b9a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90vw;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-list li {
+  background: rgba(102, 126, 234, 0.15);
+  color: #e0e0ff;
+  padding: 2rem;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.company {
+  color: #b8b8d8;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.description {
+  line-height: 1.6;
+  color: #d0d0f0;
+}
+
+.experience-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+}

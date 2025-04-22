@@ -1,0 +1,115 @@
+#contact {
+  background: #10101a;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  background: linear-gradient(90deg, #667eea, #ff6b9a); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-form {
+  width: 85vw;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(30, 30, 50, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(118, 75, 162, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  background: rgba(20, 20, 40, 0.5);
+  border: 1px solid rgba(118, 75, 162, 0.3);
+  border-radius: 8px;
+  color: #e0e0ff;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  background: var(--gradient-button);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 154, 0.5);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: #ff9bb3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  background: rgba(255, 107, 154, 0.1);
+  transition: all 0.4s ease;
+}
+
+.social-links a:hover {
+  background: rgba(102, 126, 234, 0.2);
+  color: #a18af8;
+  transform: translateY(-3px);
+}
+
+.submit-message {
+  margin: 1.2rem auto 0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.4s ease-out;
+  color: #e0e0ff;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

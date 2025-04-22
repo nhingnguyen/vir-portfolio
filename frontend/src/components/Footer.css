@@ -1,0 +1,17 @@
+.footer {
+  background: linear-gradient(180deg, #0e0e1a 0%, #0a0a12 100%);
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(118, 75, 162, 0.2);
+  overflow-x: hidden;
+}
+
+.footer p {
+  margin: 0;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  color: #e0e0ff;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+}
